@@ -72,23 +72,21 @@ results compare to those from MCS?
 **c)** For DE with 2’000 function evaluations, 𝐹 = 0.7, and a population size of 5, 10, 15, and
 20, respectively: how does the cross-over probability affect the (typical) reported results?
 
-### Problem 2
+### Problem 2  
 **a)** Assuming the items are not divisible and selection problem is binary, i.e., an item can be
-included or not, 𝑥𝑖 ∈ {0, 1}. What is the optimal combination for 𝑁 = 10? And for 𝑁 = 20?
+included or not, 𝑥𝑖 ∈ {0, 1}. What is the optimal combination for 𝑁 = 10? And for 𝑁 = 20?  
 **b)**  Assume items are divisible and 𝑥𝑖 can be real-valued, yet within limits 0 ≤ 𝑥𝑖 ≤ 1. What are now the optimal solutions for 𝑁 = 10 and 𝑁 = 20?  
 The goal is to maximize the total value of the items selected while not exceeding the budget.The budget is set at N*0.3, hence the maximum combined weight of the chosen
-items cannot be greater than N*0.3.<br>
-Following that, the function determines the value per weight for each item and arranges them in decreasing weight. Once the money is spent, it continues to choose goods in decreasing value per weight order. In cases where an item's cost prevents full selection, a portion of the item is chosen based on the amount of budget that is still available.<br>
+items cannot be greater than N*0.3.  
+Following that, the function determines the value per weight for each item and arranges them in decreasing weight. Once the money is spent, it continues to choose goods in decreasing value per weight order. In cases where an item's cost prevents full selection, a portion of the item is chosen based on the amount of budget that is still available.  
 The function returns the combined weight and value of the chosen items.<br>
 The program executes the knapsack_fractional function for two different values of N (10 and 20) and outputs the best result for each case.
 
 **Why?**
 Choosing one of the methods depends on the problem and the constraints because in practice, the capacity of the backpack is often determined by the physical limitations of the container or vehicle that will transport the items, the capacity depending on the weight and so on. Certain problems may accept the partial inclusion of certain objects but not other problems would accept complete units, that is why in general it depends on the conditions of the problem.  
 In the case of the binary knapsack problem, this is automatically satisfied since each item either has weight 0 or weight greater than 0. In the case of the fractional knapsack problem, we can include fractions of items if an item cannot be fully included to ensure that the weight constraint is satisfied.
-For knapsack_binary. The list comprehension method used to get the total value and total weight for every conceivable combination of items, however, implicitly applies E{0,1}
-it. By only adding the values and weights of items where xi = 1, the expression if c[i] in the list comprehension is used to filter out things that are not selected (i.e., where xi = 0).<br>
-The constraint that each item can only be selected (xi = 1) or not selected (xi = 0) is the same as what is being imposed in this case. As a result, in the lines of code where the list comprehension is used to calculate the total value and total weight for each conceivable combination of items, the constraint xi 0, 1 is implicitly applied. The
-constraint is applied in the expressions if c[i] used to filter out items that are not selected.
+For knapsack_binary. The list comprehension method used to get the total value and total weight for every conceivable combination of items, however, implicitly applies E{0,1}it. By only adding the values and weights of items where xi = 1, the expression if c[i] in the list comprehension is used to filter out things that are not selected (i.e., where xi = 0).  
+The constraint that each item can only be selected (xi = 1) or not selected (xi = 0) is the same as what is being imposed in this case. As a result, in the lines of code where the list comprehension is used to calculate the total value and total weight for each conceivable combination of items, the constraint xi 0, 1 is implicitly applied. The constraint is applied in the expressions if c[i] used to filter out items that are not selected.
 0 ≤ 𝑥𝑖 ≤ 1 is implicitly applied in the fraction calculation when a fraction of an item that fits within the budget is taken.
 
 
