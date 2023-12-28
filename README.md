@@ -16,9 +16,9 @@ We need to consider the differentiability of the profit function with respect to
 After plotting for the cases 'aaa', 'abc', and 'bbc', the profit function is differentiable with respect to p, and therefore gradient-based methods can be used to find the maximum or minimum. However, for the case 'cbc', the profit function is not differentiable at p=0, and therefore gradient-free methods may be more appropriate.
 
 **c)** The objective is to maximize the profit by finding the optimal price.  
-->**1) the Bisection method with initial range [0.1, 20]**
--> **2) Newton’s method with starting point x0 = 1**  
--> **3) Nelder-Mead with starting point x0=1.**  
+- **1) the Bisection method with initial range [0.1, 20]**
+- **2) Newton’s method with starting point x0 = 1**  
+- **3) Nelder-Mead with starting point x0=1.**  
 
 **Are all methods able to find the maximum?** <br>  
 
