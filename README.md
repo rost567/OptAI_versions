@@ -38,3 +38,22 @@ not at all if the initial guess is not close enough to the root or minimum.<br>
 Nelder-Mead method: Heuristic method, does not make use of derivatives, which can
 be an advantage in some cases. Although it can converge slowly, i.e. get stuck in
 local optima, especially in high-dimensional problems.
+
+**d) For Newton and Nelder-Mead: Does the starting point make a difference? What, if x0=3 or x0=15?**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
